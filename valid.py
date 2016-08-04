@@ -3,3 +3,9 @@ def validMain(option):
     return True 
   else:
     return False
+
+def validSetup(age):
+  if age < 0 or age > 125:
+    return False
+  else:
+    return True 

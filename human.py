@@ -4,3 +4,6 @@ class Human():
     self.name = name 
     self.age = age 
     self.gender = gender
+
+  def test(self):
+    print(self.name + " is alive!")
