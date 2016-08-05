@@ -1,18 +1,36 @@
 from valid import *
+from car import *
+from priusDrive import *
 from human import Human
-from car import Car
 
-def car(person):
+
+def carInfo(person):
   carOne = Car("Toyota", "Prius", 2008)
-  carTwo = Car("Tesla", "Model S", 2016)
+  carTwo = Electric("Tesla", "Model S", 2016)
   print("There are two cars two choose from: ")
   print("1. Car One")
   print("2. Car Two")
-  choice = int(input("Which one do you want to look at?"))
-  if choice == 1:
-    carOne.description()
-  elif choice == 2:
-    carTwo.description()
+  print("3. Skip Section")
+  choice = int(input("Which one do you want to look at?(3 to exit loop) "))
+  while True:
+    if choice == 1:
+      carOne.description()
+    elif choice == 2:
+      carTwo.description()
+    elif choice == 3:
+      break 
+    choice = int(input("Which one do you want to look at? "))
+  print('\n')
+  print("1. Car One")
+  print("2. Car Two")
+  selection = int(input("Please enter the number of the car you want: "))
+  if selection == 1 and person.age >= 16:
+    print("You choose the Toyota Prius")
+    drive(person, carOne )
+  elif selection == 2 and person.age >= 16:
+    print("You choose the Tesla Model S")
+  elif person.age < 16:
+    print("You are too young to drive! Even in this virtual world!")
 
 def setup():
   print("\033c")
@@ -24,7 +42,7 @@ def setup():
   gender = input("what is your gender: ")
   person = Human(name, age, gender)
   print("Now we got you set up, time to choose your car!!!")
-  car(person)
+  carInfo(person)
 
 def credits():
   print("CREDITS:")
