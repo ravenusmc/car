@@ -34,6 +34,7 @@ def main():
       option = int(input("What is your choice: "))
     if option == 1:
       setup()
+      exit()
     elif option == 2:
       print("Thank you for trying the program!")
       print("I hope you come by again!")
