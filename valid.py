@@ -1,5 +1,5 @@
 def validMain(option):
-  if option == 1 or option == 2:
+  if option == 1 or option == 2 or option == 3:
     return True 
   else:
     return False
