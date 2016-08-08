@@ -9,3 +9,10 @@ def validSetup(age):
     return False
   else:
     return True 
+
+### Validation for priusDrive file 
+def driveOne(choice):
+  if choice == 1 or choice == 2:
+    return True 
+  else: 
+    return False
