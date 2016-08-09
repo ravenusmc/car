@@ -20,9 +20,24 @@ def driveOne(person, carOne):
   elif choice == 2:
     print("Sorry you are bored!!")
 
-def driving(person, carOne):
+def house(person, carOne):
   print("You car is in the garage with the door behind you.")
   print("What do you want to do? ")
-  print("1. Back up")
+  print("1. Go Into Reverse")
   print("2. Go forward")
+  direction = int(input("What is your choice: "))
+  if direction == 1:
+    carOne.carReverse()
+    print("You roll out onto the street")
+    street(person, carOne)
+  elif direction == 2:
+    carOne.carForward()
+    print("You crash!!")
+
+def street(person, carOne):
+  print("You are out on the street!")
+  print("What do you want to do: ")
+  
+
+
 

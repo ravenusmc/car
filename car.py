@@ -20,15 +20,11 @@ class Car():
     self.start == True
     print("You turned the key. The car started")
 
-  def carDirection(self):
-    print("Which way do you want to go:")
-    print("1. Forward")
-    print("2. Reverse")
-    choice = int(input("What is your option?"))
-    if choice == 1:
-      self.direction == forward
-    elif choice == 2:
-      self.direction == reverse
+  def carReverse(self):
+    print("The car rolls backwards!")
+
+  def carForward(self):
+    print("The car moves forward!")
 
   def drive(self):
     if self.start == False:
