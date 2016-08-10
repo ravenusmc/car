@@ -4,6 +4,7 @@ from priusDrive import *
 from human import Human
 
 def main():
+  print("\033c")
   while True:
     print("******************")
     print("Welcome to Car!!!!")
@@ -46,6 +47,7 @@ def setup():
   carInfo(person)
 
 def carInfo(person):
+  print("\033c")
   carOne = Car("Toyota", "Prius", 2008)
   carTwo = Electric("Tesla", "Model S", 2016)
   print("There are two cars two choose from: ")

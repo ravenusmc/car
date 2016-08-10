@@ -8,7 +8,6 @@ class Car():
     self.speed = 0
     self.batteryCharge = 0
     self.start = False 
-    self.direction = forward
 
   def description(self):
     print("Car Information: ")
@@ -24,7 +23,9 @@ class Car():
     print("The car rolls backwards!")
 
   def carForward(self):
+    self.fuel -= 3
     print("The car moves forward!")
+
 
   def drive(self):
     if self.start == False:
