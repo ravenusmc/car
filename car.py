@@ -31,6 +31,9 @@ class Car():
     if self.start == False:
       print("You have to turn the car on!")
 
+  def carCrash(self):
+    print("The car has crashed!")
+
 
 class Electric(Car):
 

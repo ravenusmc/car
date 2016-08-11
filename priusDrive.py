@@ -57,10 +57,13 @@ def street(person, carOne):
     print("4. Turn Left")
     choice = int(input("What do you want to do: "))
     if value == 1 and choice == 1:
-      print("You crashed!!!")
+      carOne.carCrash()
       break 
     elif value == 1 and choice == 2 or choice == 3 or choice == 4:
       print("You swerved away from the object!!")
+    if value == 2 and choice == 1:
+      carOne.carCrash()
+      break
   
 
 
