@@ -4,7 +4,7 @@ class Car():
     self.make = make 
     self.model = model
     self.year = year
-    self.fuel = 0
+    self.fuel = 20
     self.speed = 0
     self.batteryCharge = 0
     self.start = False 
@@ -22,11 +22,6 @@ class Car():
   def carReverse(self):
     print("The car rolls backwards!")
 
-  def carForward(self):
-    self.fuel -= 3
-    print("The car moves forward!")
-
-
   def drive(self):
     if self.start == False:
       print("You have to turn the car on!")
@@ -34,6 +29,23 @@ class Car():
   def carCrash(self):
     print("The car has crashed!")
 
+  def carTurn(self):
+    print("You swerve away from the object!!")
+    self.fuel -= 3
+
+  def carForward(self):
+    self.fuel -= 3
+    print("You hit the gas to move forward!")
+
+  def fillUp(self):
+    self.fuel += 3
+    print("You stop at the gas station and fill up your car with gas")
+
+  def showStats(self):
+    print("Here are the stats on your car: ")
+    print("Your fuel level is: " + str(self.fuel))
+    if self.fuel <= 9:
+      print("You are starting to run low on gas. May want to get some next time the gas station comes up!")
 
 class Electric(Car):
 

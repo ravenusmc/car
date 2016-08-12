@@ -21,8 +21,9 @@ def street():
   print("\033c")
   print("You are driving on the street!")
   while True:
-    print("\033c")
+    print('\n')
     value = obstacle()
+    print(value)
     print("1. Drive")
     print("2. Turn Right")
     print("3. Turn Left")

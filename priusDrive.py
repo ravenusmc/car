@@ -38,32 +38,59 @@ def house(person, carOne):
     print("You crash!!")
 
 def obstacle():
-  value = random.randint(1,3)
+  value = random.randint(1,5)
   if value == 1:
     print("There is a box in the middle of the road")
-  if value == 2:
+  elif value == 2:
     print("A person is walking across the road from your right")
-  if value == 3:
-    print("A dog ran out across from the road")
+  elif value == 3:
+    print("A dog ran out across from the road from your left")
+  elif value == 4:
+    print("You see a gas station, will you stop there?")
+  elif value == 5:
+    print("You see a gas station, will you stop there?")
+
+  return value
 
 def street(person, carOne):
   print("\033c")
-  print("You are out on the street!")
+  print("You are driving on the street!")
   while True:
-    obstacle()
+    print('\n')
+    value = obstacle()
     print("1. Drive")
-    print("2. Brake")
-    print("3. Turn Right")
-    print("4. Turn Left")
+    print("2. Turn Right")
+    print("3. Turn Left")
+    print("4. Stop at Gas station")
     choice = int(input("What do you want to do: "))
+    #Not sure why but using the or statement below for choices was causing issues. 
+    #So I had to fully break out the if/else statements. It is ugly...I know!!!
     if value == 1 and choice == 1:
       carOne.carCrash()
       break 
-    elif value == 1 and choice == 2 or choice == 3 or choice == 4:
-      print("You swerved away from the object!!")
-    if value == 2 and choice == 1:
+    elif value == 2 and choice == 2:
       carOne.carCrash()
-      break
+      break 
+    elif value == 3 and choice == 3:
+      carOne.carCrash()
+      break 
+    elif value == 1 and choice == 2:
+      carOne.carTurn()
+    elif value == 1 and choice == 3:
+      carOne.carTurn()
+    elif value == 2 and choice == 1:
+      carOne.carForward()
+    elif value == 2 and choice == 3:
+      carOne.carTurn()
+    elif value == 3 and choice == 1:
+      carOne.carForward()
+    elif value == 3 and choice == 2:
+      carOne.carTurn()
+    elif value == 4 and choice == 4:
+      carOne.fillUp()
+    elif value == 5 and choice == 4:
+      carOne.fillUp()
+    carOne.showStats()
   
 
 

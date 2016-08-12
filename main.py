@@ -3,6 +3,7 @@ from car import *
 from priusDrive import *
 from human import Human
 
+
 def main():
   print("\033c")
   while True:
@@ -74,8 +75,10 @@ def carInfo(person):
   elif selection == 2 and person.age >= 16:
     print("You choose the Tesla Model S")
     print("The battery is fully charged as well!")
-    carTwo.batteryCharge = 100
+    carTwo.batteryCharge = 20
   elif person.age < 16:
     print("You are too young to drive! Even in this virtual world!")
+
+
 
 main()
