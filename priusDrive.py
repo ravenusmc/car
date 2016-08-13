@@ -1,6 +1,7 @@
 ### All of the functions for the Prius will be in this file. 
 from car import Car
 from valid import * 
+from gas import GasStation
 import random
 
 def driveOne(person, carOne):
@@ -55,6 +56,7 @@ def obstacle():
 def street(person, carOne):
   print("\033c")
   print("You are driving on the street!")
+  station = GasStation()
   while True:
     print('\n')
     value = obstacle()
@@ -87,9 +89,9 @@ def street(person, carOne):
     elif value == 3 and choice == 2:
       carOne.carTurn()
     elif value == 4 and choice == 4:
-      carOne.fillUp()
+      station.fillUp(carOne)
     elif value == 5 and choice == 4:
-      carOne.fillUp()
+      station.fillUp(carOne)
     carOne.showStats()
   
 
