@@ -5,7 +5,7 @@ from gas import GasStation
 from valid import *
 import random
 
-def driveOne(person, carOne):
+def driving(person, carOne):
   print("\033c")
   print("You now have your car!")
   print("1. Cruise the roads!")
@@ -18,7 +18,7 @@ def driveOne(person, carOne):
     option = int(input("What is your choice: "))
     if option == 1:
       carOne.startCar()
-      street(person, carOne)
+      house(person, carOne)
     elif option == 2:
       carOne.drive()
   elif choice == 2:

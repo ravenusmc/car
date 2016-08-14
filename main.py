@@ -72,7 +72,7 @@ def carInfo(person):
   if selection == 1 and person.age >= 16:
     print("You choose the Toyota Prius")
     print("It also has a full tank of gas!")
-    driveOne(person, carOne )
+    driving(person, carOne)
   elif selection == 2 and person.age >= 16:
     print("You choose the Tesla Model S")
     print("The battery is fully charged as well!")
@@ -80,7 +80,5 @@ def carInfo(person):
     driveTwo(person, carTwo)
   elif person.age < 16:
     print("You are too young to drive! Even in this virtual world!")
-
-
 
 main()

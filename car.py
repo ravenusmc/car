@@ -63,5 +63,5 @@ class Electric(Car):
     print("Here are the stats on your car: ")
     print("Your charge level is: " + str(self.batteryCharge))
     if self.batteryCharge <= 9:
-      print("You are starting to run low on gas. May want to get some next time the gas station comes up!")
+      print("You are starting to run low on battery power. You may want to get some next time the gas station comes up!")
 
