@@ -1,6 +1,7 @@
 from valid import *
 from car import *
 from priusDrive import *
+from teslaDrive import *
 from human import Human
 
 
@@ -76,6 +77,7 @@ def carInfo(person):
     print("You choose the Tesla Model S")
     print("The battery is fully charged as well!")
     carTwo.batteryCharge = 20
+    driveTwo(person, carTwo)
   elif person.age < 16:
     print("You are too young to drive! Even in this virtual world!")
 

@@ -5,8 +5,6 @@ class Car():
     self.model = model
     self.year = year
     self.fuel = 20
-    self.speed = 0
-    self.batteryCharge = 0
     self.start = False 
 
   def description(self):
@@ -51,4 +49,19 @@ class Electric(Car):
     self.year = year
     self.speed = 0
     self.batteryCharge = 0
+    self.start = False 
+
+  def electricTurn(self):
+    print("You swerve away from the object!!")
+    self.batteryCharge -= 3
+
+  def electricForward(self):
+    self.batteryCharge -= 3
+    print("You hit the gas to move forward!")
+
+  def showStatsElectric(self):
+    print("Here are the stats on your car: ")
+    print("Your charge level is: " + str(self.batteryCharge))
+    if self.batteryCharge <= 9:
+      print("You are starting to run low on gas. May want to get some next time the gas station comes up!")
 
