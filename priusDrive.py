@@ -2,6 +2,7 @@
 from car import Car
 from valid import * 
 from gas import GasStation
+from valid import *
 import random
 
 def driveOne(person, carOne):
@@ -65,6 +66,8 @@ def street(person, carOne):
     print("3. Turn Left")
     print("4. Stop at Gas station")
     choice = int(input("What do you want to do: "))
+    while not streetValid(choice):
+      choice = int(input("What do you want to do: "))
     #Not sure why but using the or statement below for choices was causing issues. 
     #So I had to fully break out the if/else statements. It is ugly...I know!!!
     if value == 1 and choice == 1:

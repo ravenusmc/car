@@ -37,10 +37,6 @@ class Car():
     self.fuel -= 3
     print("You hit the gas to move forward!")
 
-  def fillUp(self):
-    self.fuel += 3
-    print("You stop at the gas station and fill up your car with gas")
-
   def showStats(self):
     print("Here are the stats on your car: ")
     print("Your fuel level is: " + str(self.fuel))
